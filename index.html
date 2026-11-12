@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadzim · przyszły programista</title>
+    <meta name="description" content="Vadzim, uczeń technikum (technik programista). Java, Python, JavaScript, PHP, SQL, HTML i CSS.">
+    <meta name="theme-color" content="#0b0c0f">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23c6f432'/><text x='50%25' y='56%25' font-family='monospace' font-size='34' font-weight='700' text-anchor='middle' dominant-baseline='middle' fill='%230b0c0f'>v</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fun.css">
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <div class="progress" aria-hidden="true"></div>
+    <div class="bg" aria-hidden="true">
+        <div class="bg__grid"></div>
+        <div class="bg__orb bg__orb--a"></div>
+        <div class="bg__orb bg__orb--b"></div>
+        <div class="bg__orb bg__orb--c"></div>
+        <div class="bg__spot"></div>
+    </div>
+
+    <nav class="nav">
+        <a class="nav__logo" href="#top">vadzim<span>.dev</span></a>
+        <div class="nav__links">
+            <a href="#stack">Stack</a>
+            <a href="#terminal">Terminal</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+        <button class="theme" id="theme" type="button" aria-label="Zmień motyw">
+            <svg class="theme__sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+            <svg class="theme__moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        </button>
+    </nav>
+
+    <main id="top">
+        <header class="hero">
+            <p class="status"><span class="status__dot"></span>Otwarty na praktyki i staż</p>
+            <h1 class="hero__title">
+                Cześć, jestem<br>
+                <span class="hero__name">Vadzim<span class="hero__cursor">_</span></span>
+            </h1>
+            <p class="hero__lead">
+                Uczę się w technikum na <strong>technika programistę</strong>.
+                Teraz piszę w <span class="typed" id="typed">Javie</span>
+            </p>
+            <div class="hero__actions">
+                <a class="btn btn--main" href="#kontakt">Napisz do mnie</a>
+                <a class="btn btn--ghost" href="#terminal"><code>&gt;_</code> otwórz terminal</a>
+            </div>
+        </header>
+
+        <div class="runway"><div class="bug" id="bug" title="kliknij mnie"></div></div>
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Java</span><span>Python</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Git</span>
+                <span>Java</span><span>Python</span><span>JavaScript</span><span>PHP</span><span>SQL</span><span>HTML</span><span>CSS</span><span>Git</span>
+            </div>
+        </div>
+
+        <section class="block reveal" id="o-mnie">
+            <h2 class="label">01 / o mnie</h2>
+            <p class="big">
+                Lubię rozumieć, jak działa cała aplikacja, od <em>bazy danych</em> aż po to, co widać w przeglądarce.
+                Rozwijam się w stronę <em>fullstacka</em>, a po godzinach grzebię w danych i Pythonie.
+            </p>
+        </section>
+
+        <section class="block reveal" id="stack">
+            <h2 class="label">02 / stack</h2>
+            <div class="stack">
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>Java</h3><span class="tag">OOP</span></div>
+                    <p>Programowanie obiektowe, klasy, kolekcje, pierwsze aplikacje konsolowe.</p>
+                    <code>System.out.println("hej");</code>
+                </article>
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>Python</h3><span class="tag">skrypty</span></div>
+                    <p>Automatyzacja, małe narzędzia i podstawy analizy danych.</p>
+                    <code>print(f"hej, {name}")</code>
+                </article>
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>JavaScript</h3><span class="tag">front</span></div>
+                    <p>Interakcje na stronie, DOM, zdarzenia. Ta strona jest napisana w czystym JS.</p>
+                    <code>document.querySelector("h1")</code>
+                </article>
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>PHP</h3><span class="tag">back</span></div>
+                    <p>Logika po stronie serwera, formularze, sesje, połączenie z bazą.</p>
+                    <code>&lt;?php echo "hej"; ?&gt;</code>
+                </article>
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>SQL</h3><span class="tag">MySQL</span></div>
+                    <p>Projektowanie tabel, relacje, zapytania z JOIN i GROUP BY.</p>
+                    <code>SELECT * FROM pomysly;</code>
+                </article>
+                <article class="card" data-tilt>
+                    <div class="card__top"><h3>HTML &amp; CSS</h3><span class="tag">UI</span></div>
+                    <p>Semantyczny HTML, flexbox, grid, responsywność i animacje.</p>
+                    <code>display: grid;</code>
+                </article>
+            </div>
+        </section>
+
+        <section class="block reveal">
+            <h2 class="label">03 / w którą stronę idę</h2>
+            <ul class="paths">
+                <li><span>Backend</span><small>API, serwery, bazy danych</small></li>
+                <li><span>Frontend</span><small>interfejsy, które dobrze się klika</small></li>
+                <li><span>Fullstack</span><small>aplikacja od A do Z</small></li>
+                <li><span>Data</span><small>analiza i wizualizacja danych</small></li>
+                <li><span>Software Engineering</span><small>architektura i dobre praktyki</small></li>
+            </ul>
+        </section>
+
+        <section class="block reveal" id="terminal">
+            <h2 class="label">04 / terminal</h2>
+            <p class="hint">Wpisz <code>help</code>, żeby zobaczyć komendy.</p>
+            <div class="term" id="term">
+                <div class="term__bar">
+                    <i></i><i></i><i></i>
+                    <span>vadzim@dev: ~</span>
+                </div>
+                <div class="term__body" id="termBody">
+                    <div class="term__out" id="termOut"></div>
+                    <form class="term__line" id="termForm" autocomplete="off">
+                        <label for="termInput"><b>vadzim@dev</b>:<em>~</em>$</label>
+                        <input id="termInput" type="text" spellcheck="false" aria-label="Komenda">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="block reveal">
+            <h2 class="label">05 / droga</h2>
+            <ol class="road">
+                <li>
+                    <span class="road__when">teraz</span>
+                    <h3>Technikum</h3>
+                    <p>Kierunek technik programista.</p>
+                </li>
+                <li>
+                    <span class="road__when">w trakcie</span>
+                    <h3>Pierwsze projekty na GitHubie</h3>
+                    <p>Ta strona to pierwszy z nich. Kolejne już się piszą.</p>
+                </li>
+                <li class="road__next">
+                    <span class="road__when">następny krok</span>
+                    <h3>Praktyki w firmie IT</h3>
+                    <p>Chcę pracować przy prawdziwym produkcie i uczyć się od zespołu.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="block reveal" id="szachy">
+            <h2 class="label">fun fact / po godzinach</h2>
+            <div class="chess">
+                <div class="board" id="board" aria-hidden="true"></div>
+                <div>
+                    <h3>Po godzinach gram w szachy. Uczą myśleć kilka ruchów do przodu, jak w kodzie.</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="block contact reveal" id="kontakt">
+            <h2 class="label">06 / kontakt</h2>
+            <p class="contact__title">Masz praktyki, staż albo ciekawy projekt?</p>
+            <a class="contact__link" href="https://github.com/vadzim-dev" target="_blank" rel="noopener">
+                github.com/vadzim-dev
+                <svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <span>© <span id="year">2026</span> Vadzim</span>
+        <span>HTML · CSS · JS</span>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="fun.js"></script>
+    <script src="chess.js"></script>
+</body>
+</html>
